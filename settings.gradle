@@ -1,0 +1,1 @@
+include "fibcalc-api", "fibcalc-core", "fibcalc-ear", "fibcalc-war", "fibcalc-lib"

@@ -1,0 +1,18 @@
+
+apply plugin: 'ear'
+
+dependencies {
+	deploy project(path: ':fibcalc-war', configuration: 'archives')
+	earlib project(':fibcalc-core')
+	earlib project(':fibcalc-api')
+	earlib project(':fibcalc-lib')
+}
+
+ear {
+	deploymentDescriptor {
+		def warName = project(':fibcalc-war').name
+		def warVersion = project(':fibcalc-war').version
+		def warFileName = warName + '-' + warVersion + '.war'
+		webModule(warFileName, 'fibcalc')
+	}
+}
