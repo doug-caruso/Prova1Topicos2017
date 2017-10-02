@@ -1,7 +1,12 @@
 
 public class Result {
 	private int num;
-	private int result;
+	private int fibonacci;
+
+	public Result(int num, int fibonacci) {
+		this.num = num;
+		this.fibonacci = fibonacci;
+	}
 
 	public int getNum() {
 		return num;
@@ -11,21 +16,12 @@ public class Result {
 		this.num = num;
 	}
 
-	public Result withNum(int num) {
-		this.num = num;
-		return this;
+	public int getFibonacci() {
+		return fibonacci;
 	}
 
-	public int getResult() {
-		return result;
+	public void setFibonacci(int fibonacci) {
+		this.fibonacci = fibonacci;
 	}
 
-	public void setResult(int result) {
-		this.result = result;
-	}
-
-	public Result withResult(int result) {
-		this.result = result;
-		return this;
-	}
 }
